@@ -37,10 +37,10 @@ Modelos compatíveis:
 
 ## Ligação Backlight
 
-| Módulo LCD | TRIMPOT 10K~20K |
-|------------|-----------------|
-|      A     |       3.3V      |
-|      K     |       GND       |
+| Módulo LCD | Arduino |
+|------------|---------|
+|      A     |   3.3V  |
+|      K     |   GND   |
 
 ## Depuração
 
