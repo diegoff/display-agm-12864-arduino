@@ -33,7 +33,7 @@ Modelos compatíveis:
 |------------|-----------------|
 |     VEE    |        A        |
 |     GND    |        B        |
-|     V0     |    C (MIDLE)    |
+|     V0     |   C (MIDDLE)    |
 
 ## Ligação Backlight
 
