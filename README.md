@@ -2,7 +2,9 @@
 
 Modelos compatíveis:
 > AGM 12864A (Todo: Realizar teste)
+
 > AGM 12864D2
+
 > AGM 12864E1 (Todo: Realizar teste)
 
 ## Ligação Controle Lógico
