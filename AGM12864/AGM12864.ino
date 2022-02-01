@@ -181,13 +181,13 @@ void chipSelect(byte chip)
 #if DEBUG
   Serial.println(F("SELECIONANDO CHIP:"));
   Serial.print(F("CS1: "));
-  Serial.println(bitRead(chip, 7));
+  Serial.println(INVERT_SELECTOR ? !bitRead(chip, 7) : bitRead(chip, 7));
 #endif
   digitalWrite(CS1, INVERT_SELECTOR ? !bitRead(chip, 7) : bitRead(chip, 7));
 
 #if DEBUG
   Serial.print(F("CS2: "));
-  Serial.println(bitRead(chip, 6));
+  Serial.println(INVERT_SELECTOR ? !bitRead(chip, 6) : bitRead(chip, 6));
 #endif
   digitalWrite(CS2, INVERT_SELECTOR ? !bitRead(chip, 6) : bitRead(chip, 6));
 }
