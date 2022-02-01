@@ -239,7 +239,7 @@ void sendBus(byte data)
 }
 
 //==================================
-// Bloco de envio para barramento
+// Bloco de reinício de endereço
 //==================================
 
 void homeAddress(byte page)
@@ -253,20 +253,24 @@ void homeAddress(byte page)
 
 void setup()
 {
+#if DEBUG
    Serial.begin(9600);
- 
+#endif
+
    pinMode(E, OUTPUT);
    pinMode(RS, OUTPUT);
    pinMode(RW, OUTPUT);
    pinMode(CS1, OUTPUT);
    pinMode(CS2, OUTPUT);
-delay(1000);
+#if DEBUG
+   delay(1000);
+#endif
 
 #if DEBUG
    Serial.println(F("----- STATUS INICIAL -----"));
-#endif
+
    delay(1000);
-#if DEBUG
+
    Serial.println(F("CHIP 1:"));
 #endif
    readCommand(CHIP1);
@@ -277,8 +281,10 @@ delay(1000);
 
 #if DEBUG
    Serial.println(F("----- COMANDOS INICIAIS -----"));
-#endif
+
    delay(1000);
+#endif
+
    writeCommand(ALL_CHIP, 0x3f); /*display on*/   
    writeCommand(ALL_CHIP, 0x40); /*y=0*/
    writeCommand(ALL_CHIP, 0xb8); /*x=0*/
@@ -286,9 +292,9 @@ delay(1000);
    
 #if DEBUG
    Serial.println(F("----- STATUS FINAL -----"));
-#endif
+
    delay(1000);
-#if DEBUG
+
    Serial.println(F("STATUS CHIP 1:"));
 #endif
    readCommand(CHIP1);
