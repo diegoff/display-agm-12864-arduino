@@ -14,7 +14,7 @@ Modelos compatíveis:
 |     VDD    |    5V   |
 |     VSS    |   GND   |
 |      E     |    13   |
-|     RS     |    12   |
+|     DI     |    12   |
 |     RW     |    11   |
 |     CS1    |    10   |
 |     CS2    |    9    |
